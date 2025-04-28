@@ -1,0 +1,33 @@
+[project]
+name = "news-navigator"
+version = "0.1.0"
+description = "An agent that fetches and summarizes latest news about a given topic"
+authors = [
+    {name = "abhinand4as",email = "abhinand4as@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10,<4.0"
+dependencies = [
+    "langchain (>=0.3.24,<0.4.0)",
+    "langgraph (>=0.3.34,<0.4.0)",
+    "langchain-openai (>=0.3.14,<0.4.0)",
+    "python-dotenv (>=1.1.0,<2.0.0)",
+    "requests (>=2.32.3,<3.0.0)",
+    "newsapi-python (>=0.2.7,<0.3.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+news-navigator = "news_navigator.main:main"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+black = "^25.1.0"
+isort = "^6.0.1"
+mypy = "^1.15.0"
+types-requests = "^2.32.0.20250328"
+
